@@ -15,9 +15,10 @@
     <!--<tr><th>Sanonta</th><th>Kertoja</th> </tr>-->
     <tr>
         <td>
-            <form th:action="@{/lomakekasittelija}" th:object="${lisaysOlio}" method="post">
-                <div><label th:text="'Sanonta:'" th:for="teksti"/> <input th:field="*{teksti}"/></div>
-                <div>KEnen suusta:<input th:type="text" th:field="*{kertoja}"/></div>
+            <form action="#" th:action="@{/tokasivu}" th:object="${lisaysOlio}" method="post">
+                <!--<div><label th:text="'Sanonta:'" th:for="teksti"/> <input th:field="*{teksti}"/></div>-->
+                <div>Sanonta: <input th:type="text" th:field="*{teksti}"/></div>
+                <div>Kenen suusta: <input th:type="text" th:field="*{kertoja}"/></div>
                 <!--<div>value:<input th:type="text" th:field="*{value}"/></div>-->
                 <button>Submit</button>
             </form>
