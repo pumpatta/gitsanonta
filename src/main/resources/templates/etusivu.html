@@ -32,9 +32,15 @@
         <th>Sanonta</th>
         <th>Kertoja</th>
     </tr>
-    <tr th:each="sanonta: ${thViite.sanonnat}">
-        <td th:text="${sanonta.teksti}"></td>
-        <td th:text="${sanonta.kertoja}"></td>
+    <tr th:each="sanonta: ${lisaysOlio}">
+
+        <td th:if="${sanonta.teksti==null}" >Hijast o! </td>
+        <td th:unless="${sanonta.teksti==null}" th:text="${sanonta.teksti}" ></td>
+
+        <td th:text="${sanonta.kertoja}==null ? 'Tuntematon' : ${sanonta.kertoja}" ></td>
+
+
+
     </tr>
 
 </table>
