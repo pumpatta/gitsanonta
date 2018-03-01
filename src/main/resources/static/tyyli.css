@@ -1,0 +1,44 @@
+body {
+
+    background: url("https://funmastitown.files.wordpress.com/2014/10/best-nature-full-hd-wallpapers3.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.isolohko {
+    width: 70%;
+    margin:auto;
+}
+
+.tausta {
+    background-blend-mode: lighten;
+}
+
+table{
+    margin: auto;
+    min-width: 400px;
+}
+
+.perus {
+    background-color: white;
+    text-align: center;
+    opacity: 0.9;
+    font-family: Calibri;
+    font-size: 16px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+td {
+    padding: 5px 10px 5px 10px;
+    vertical-align: top;
+}
+
+#linkkicss {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+.tyhja {
+    color:red;
+}
