@@ -9,17 +9,17 @@
 <body>
 <p>Kukkuu</p>
 
-<p th:text="|Sanonta: ${thViite.getSanonnat().get(0)}|"/>
+<!--<p th:text="|Sanonta: ${thViite.getSanonnat().get(0)}|"/>-->
 <!--<p th:text="|Kenen suusta: ${thViite.kertoja}|"/>-->
 
-<!--<table>-->
-    <!--<tr><th>Sanonta</th><th>Sanoja</th> </tr>-->
-    <!--<tr th:each="sanonta: ${listaus}">-->
-        <!--<td th:text="${sanonta.teksti}"></td>-->
-        <!--<td th:text="${sanonta.kertoja}"></td>-->
-    <!--</tr>-->
+<table class="perus">
+    <tr><th>Sanonta</th><th>Kertoja</th> </tr>
+    <tr th:each="sanonta: ${thViite.sanonnat}">
+        <td th:text="${sanonta.teksti}"></td>
+        <td th:text="${sanonta.kertoja}"></td>
+    </tr>
 
-<!--</table>-->
+</table>
 
 </body>
 </html>
