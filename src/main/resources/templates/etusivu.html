@@ -32,14 +32,12 @@
         <th>Sanonta</th>
         <th>Kertoja</th>
     </tr>
-    <tr th:each="sanonta: ${lisaysOlio}">
+    <tr th:each="sanonta: ${thViite.getSanonnat()}">
 
-        <td th:if="${sanonta.teksti==null}" >Hijast o! </td>
-        <td th:unless="${sanonta.teksti==null}" th:text="${sanonta.teksti}" ></td>
+        <td th:if="${sanonta.getTeksti()==''}" > Hijast o! </td>
+        <td th:unless="${sanonta.getTeksti()==''}" th:text="${sanonta.getTeksti()}" ></td>
 
-        <td th:text="${sanonta.kertoja}==null ? 'Tuntematon' : ${sanonta.kertoja}" ></td>
-
-
+        <td th:text="${sanonta.getKertoja()}=='' ? 'Tuntematon' : ${sanonta.getKertoja()}" ></td>
 
     </tr>
 
