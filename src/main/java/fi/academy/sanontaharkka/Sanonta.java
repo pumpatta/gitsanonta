@@ -4,9 +4,12 @@ public class Sanonta {
 
     private String teksti;
     private String kertoja;
+    private static int laskuri = -1;
     private int id;
 
     public Sanonta() {
+        laskuri++;
+        this.id = laskuri;
     }
 
     public Sanonta(String teksti) {
@@ -16,7 +19,8 @@ public class Sanonta {
     public Sanonta(String teksti, String kertoja) {
         this.teksti = teksti;
         this.kertoja = kertoja;
-        this.id = id; //id:n pitää päivittyä automaattisesti
+        laskuri++;
+        this.id = laskuri;
     }
 
     public String getTeksti() {

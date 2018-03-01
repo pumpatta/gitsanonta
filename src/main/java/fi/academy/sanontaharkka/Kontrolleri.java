@@ -42,5 +42,13 @@ public class Kontrolleri {
         return "etusivu";
     }
 
+    @PostMapping ("/poisto")
+    public String poistaja (int numero, Model model) {
+        lista1.poistaListalta(numero);
+        model.addAttribute("thViite", lista1);
+        model.addAttribute("lisaysOlio",new Sanonta());
+        return "etusivu";
+    }
+
 
 }

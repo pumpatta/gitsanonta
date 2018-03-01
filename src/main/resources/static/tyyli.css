@@ -3,6 +3,12 @@ body {
     background: url("https://funmastitown.files.wordpress.com/2014/10/best-nature-full-hd-wallpapers3.jpg");
     background-repeat: no-repeat;
     background-size:cover;
+    font-family: Calibri;
+    font-size: 16px;
+}
+
+p {
+    color: floralwhite;
 }
 
 .isolohko {
@@ -15,7 +21,7 @@ body {
 }
 
 table{
-    margin: auto;
+    margin: 10px auto 10px auto;
     min-width: 400px;
 }
 
@@ -23,8 +29,6 @@ table{
     background-color: white;
     text-align: center;
     opacity: 0.9;
-    font-family: Calibri;
-    font-size: 16px;
     padding: 20px;
     border-radius: 5px;
 }

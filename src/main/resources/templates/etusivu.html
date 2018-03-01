@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="tyyli.css" th:href="@{/tyyli.css}"/>
 </head>
 <body>
-<p>Kukkuu</p>
+<p>Tervetuloa sanontapankkiin. <br/>
+    Muutaman esimerkkisanonnan lisäksi voit <br/>
+    lisätä omia sanontoja ja poistaa sanontoja.</p>
 
 <!--<p th:text="|Sanonta: ${thViite.getSanonnat().get(0)}|"/>-->
 <!--<p th:text="|Kenen suusta: ${thViite.kertoja}|"/>-->
@@ -29,11 +31,13 @@
 
 <table class="perus">
     <tr>
+        <th>Id</th>
         <th>Sanonta</th>
         <th>Kertoja</th>
     </tr>
     <tr th:each="sanonta: ${thViite.getSanonnat()}">
 
+        <td th:text="${sanonta.getId()}"></td>
         <td th:if="${sanonta.getTeksti()==''}" > Hijast o! </td>
         <td th:unless="${sanonta.getTeksti()==''}" th:text="${sanonta.getTeksti()}" ></td>
 
