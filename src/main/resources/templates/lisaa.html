@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Lisää sanonta</title>
+    <meta charset="UTF-8"/>
+    <!--Tyylitiedosto resources/static/css -hakemistoon, löytyy automaagisesti-->
+    <link rel="stylesheet" href="tyyli.css" th:href="@{/tyyli.css}"/>
+</head>
+<body>
+
+<table>
+    <tr>
+        <td>
+            <form action="#" th:action="@{/lisaa}" th:object="${lisaysOlio}" method="post">
+                <input type="text" th:field="*{teksti}" />
+                <input type="text" th:field="*{kertoja}" />
+                <input type="submit" value="Lähetä" />
+            </form>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
