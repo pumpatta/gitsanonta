@@ -11,8 +11,10 @@ public class Kontrolleri {
     @GetMapping ("/etusivu")
     public String sanonnatSivulle (Model model) {
         Sanonta sanonta1 = new Sanonta("Elämä on laiffii", "Matti Nykänen");
+        Sanonta sanonta2 = new Sanonta("Pata kattilaa soimaa", "Tuntematon");
         SanontaLista lista1 = new SanontaLista();
         lista1.lisaaListalle(sanonta1);
+        lista1.lisaaListalle(sanonta2);
         model.addAttribute("thViite", lista1);
         return "etusivu";
     }
