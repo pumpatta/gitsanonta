@@ -43,12 +43,22 @@ public class Kontrolleri {
     }
 
     @PostMapping ("/poisto")
-    public String poistaja (int numero, Model model) {
-        lista1.poistaListalta(numero);
+    public String poistaja (Arvo numero, Model model) {
+        lista1.poistaListalta(numero.id);
         model.addAttribute("thViite", lista1);
         model.addAttribute("lisaysOlio",new Sanonta());
         return "etusivu";
     }
 
 
+}
+class Arvo{int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 }

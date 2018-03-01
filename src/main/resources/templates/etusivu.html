@@ -9,7 +9,7 @@
 <body>
 <p>Tervetuloa sanontapankkiin. <br/>
     Muutaman esimerkkisanonnan lisäksi voit <br/>
-    lisätä omia sanontoja ja poistaa sanontoja.</p>
+    lisätä omia sanontoja ja yrittää poistaa sanontoja.</p>
 
 <!--<p th:text="|Sanonta: ${thViite.getSanonnat().get(0)}|"/>-->
 <!--<p th:text="|Kenen suusta: ${thViite.kertoja}|"/>-->
@@ -28,6 +28,16 @@
     </tr>
 </table>
 
+<table class="perus">
+    <tr>
+        <td>
+            <form action="#" th:action="@{/poisto}" method="post">
+                <div>Anna poistettavan Id: <input th:type="text" th:name="id"/></div>
+                <button>Delete</button>
+            </form>
+        </td>
+    </tr>
+</table>
 
 <table class="perus">
     <tr>

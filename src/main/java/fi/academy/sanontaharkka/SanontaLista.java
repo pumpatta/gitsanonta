@@ -20,8 +20,9 @@ public class SanontaLista {
         return sanonnat;
     }
 
-    public void poistaListalta (int poistettava) {
-        sanonnat.remove(poistettava);
+    public void poistaListalta (int arvo) {
+        sanonnat.remove(arvo-1);
     }
 
 }
+
