@@ -11,9 +11,26 @@
 
 <!--<p th:text="|Sanonta: ${thViite.getSanonnat().get(0)}|"/>-->
 <!--<p th:text="|Kenen suusta: ${thViite.kertoja}|"/>-->
+<table class="perus">
+    <!--<tr><th>Sanonta</th><th>Kertoja</th> </tr>-->
+    <tr>
+        <td>
+            <form th:action="@{/lomakekasittelija}" th:object="${lisaysOlio}" method="post">
+                <div><label th:text="'Sanonta:'" th:for="teksti"/> <input th:field="*{teksti}"/></div>
+                <div>KEnen suusta:<input th:type="text" th:field="*{kertoja}"/></div>
+                <!--<div>value:<input th:type="text" th:field="*{value}"/></div>-->
+                <button>Submit</button>
+            </form>
+        </td>
+    </tr>
+</table>
+
 
 <table class="perus">
-    <tr><th>Sanonta</th><th>Kertoja</th> </tr>
+    <tr>
+        <th>Sanonta</th>
+        <th>Kertoja</th>
+    </tr>
     <tr th:each="sanonta: ${thViite.sanonnat}">
         <td th:text="${sanonta.teksti}"></td>
         <td th:text="${sanonta.kertoja}"></td>

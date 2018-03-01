@@ -3,6 +3,8 @@ package fi.academy.sanontaharkka;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -23,7 +25,13 @@ public class Kontrolleri {
     public String lomake(Model model){
 
         model.addAttribute("lisaysOlio",new Sanonta());
-        return "lisaa";
+        return "etusivu";
+    }
+
+    @PostMapping("/lomakekasittelija")
+    public String lomakekasittelija(@ModelAttribute Sanonta sanonta) {
+
+        return "etusivu";
     }
 
 
